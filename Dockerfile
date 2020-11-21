@@ -1,3 +1,3 @@
-FROM openjdk:8
-Expose 8080
-ADD /var/lib/jenkins/workspace/trail-1/target/maven-web-application.war maven-web-application.war
+FROM tomcat:8
+# Take the war and copy to webapps of tomcat
+COPY target/newapp.war /usr/local/tomcat/webapps/
